@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="g : ${games}">
+                <td><span th:text="${g.name}"></span></td>
+                <td><span th:text="${g.year}"></span></td>
+                <!-- <td><span th:text="${g.url}"></span></td> -->
+                <td>
+                    <a th:href="${g.url}" target="_blank" th:text="${g.url}"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+</body>
+</html>
